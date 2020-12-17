@@ -43,62 +43,63 @@ if ($db->connect_error) {
     <!-- owl stylesheets -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
 </head>
 
 <body>
     <!--header section start -->
     <div class="header_section header_bg">
-         <div class="container-fluid">
-               <div class="main">
-                  <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-                  <div class="menu_text">
-                     <ul>
+        <div class="container-fluid">
+            <div class="main">
+                <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                <div class="menu_text">
+                    <ul>
                         <div class="togle_">
-                           <div class="menu_main">
-                              <ul>
-                                 <li><a href="#">Login</a></li>
-                                 <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                              </ul>
-                           </div>
+                            <div class="menu_main">
+                                <ul>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div id="myNav" class="overlay">
-                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                           <div class="overlay-content">
-                              <a href="index.html">Home</a>
-                              <a href="protect.html">Protect</a>
-                              <a href="about.html">About</a>
-                              <a href="doctors.html">Doctors</a>
-                              <a href="news.html">News</a>
-                           </div>
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div class="overlay-content">
+                                <a href="index.html">Home</a>
+                                <a href="protect.html">Protect</a>
+                                <a href="about.html">About</a>
+                                <a href="doctors.html">Doctors</a>
+                                <a href="news.html">News</a>
+                            </div>
                         </div>
                         <span class="navbar-toggler-icon"></span>
                         <span onclick="openNav()"><img src="images/toogle-icon.png" class="toggle_menu"></span>
                         <span onclick="openNav()"><img src="images/toogle-icon1.png" class="toggle_menu_1"></span>
-                     </ul>
-                  </div>
-               </div>
+                    </ul>
+                </div>
             </div>
-            <!-- banner section start -->
-            <div class="container">
-               <div class="about_taital_main">
-                  <h2 class="about_tag">Test Dini Covid-19</h2>
-                  <div class="about_menu">
-                     <ul>
+        </div>
+        <!-- banner section start -->
+        <div class="container">
+            <div class="about_taital_main">
+                <h2 class="about_tag">Test Dini Covid-19</h2>
+                <div class="about_menu">
+                    <ul>
                         <li><a href="index.html">Home</a></li>
                         <li>About</li>
-                     </ul>
-                  </div>
-               </div>
+                    </ul>
+                </div>
             </div>
-         <!-- banner section end -->
-      </div>
-      <!-- header section end -->
-<div class="container ">
-    <h3>Isi form berikut</h3>
-<form method="post" class="mt-5 mb-5">
-<!-- menampilkan daftar gejala-->
-<?php
+        </div>
+        <!-- banner section end -->
+    </div>
+    <!-- header section end -->
+    <div class="container ">
+        <h3>Isi form berikut</h3>
+        <form method="post" class="mt-5 mb-5">
+            <!-- menampilkan daftar gejala-->
+            <?php
 $sqli="SELECT * FROM ds_evidences";
 $result=$db->query($sqli);
 while($row=$result->fetch_object()){
@@ -107,9 +108,9 @@ while($row=$result->fetch_object()){
         ."> {$row->code} {$row->name}<br>";
 }
 ?>
-<input type="submit" value="proses">
-</form>
-<pre>
+            <input type="submit" value="proses">
+        </form>
+        <pre>
 <?php
     //-- Mengambil Nilai Belief Gejala Yang dipilih
 if(isset($_POST['evidence'])){
@@ -204,63 +205,58 @@ if(isset($_POST['evidence'])){
 </div>
 <!-- footer section start -->
 <div class="footer_section layout_padding">
-         <div class="container">
+        <div class="container">
             <div class="footer_section_2">
-               <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                     <h2 class="useful_text">Resources</h2>
-                     <div class="footer_menu">
-                        <ul>
-                           <li><a href="#">What we do</a></li>
-                           <li><a href="#">Media</a></li>
-                           <li><a href="#">Travel Advice</a></li>
-                           <li><a href="#">Protection</a></li>
-                           <li><a href="#">Care</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <h2 class="useful_text">About</h2>
-                     <p class="footer_text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various</p>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <h2 class="useful_text">Contact Us</h2>
-                     <div class="location_text">
-                        <ul>
-                           <li>
-                              <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                              <span class="padding_15">Location</span></a>
-                           </li>
-                           <li>
-                              <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>
-                              <span class="padding_15">Call +01 1234567890</span></a>
-                           </li>
-                           <li>
-                              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
-                              <span class="padding_15">demo@gmail.com</span></a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <h2 class="useful_text">countrys</h2>
-                     <div class="map_image"><img src="images/map-bg.png"></div>
-                  </div>
-               </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-8">
+                        <h2 class="useful_text">Resources</h2>
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#">Covid</a></li>
+                                <li><a href="#">Media</a></li>
+                                <li><a href="#">cara Penanganan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <h2 class="useful_text">About</h2>
+                        <p class="footer_text"> Implementasi Dempster–Shafer Theory dalam Deteksi Dini Covid-19
+</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <h2 class="useful_text">Contact Us</h2>
+                        <div class="location_text">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                              <span class="padding_15">Indoneisa </span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>
+                              <span class="padding_15">0000000000000</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+                              <span class="padding_15">kelompok10@gmail.com</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
       <!-- footer section end -->
       <!-- copyright section start -->
       <div class="copyright_section">
-         <div class="container">
+        <div class="container">
             <div class="row">
-               <div class="col-sm-12">
-                  <p class="copyright_text">© 2020 All Rights Reserved.<a href="https://html.design"> Free  html Templates</a></p>
-               </div>
+                <div class="col-sm-12">
+                    <p class="copyright_text">© 2020 Kelompok 10.<a href="sistempakar.php"> Sistem Pakar</a></p>
+                </div>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
       <!-- copyright section end -->
 <!-- Javascript files-->
 <script src="js/jquery.min.js"></script>
